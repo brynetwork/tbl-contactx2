@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Contact extends CI_Controller {
 
 	public function index(){
+		/*I just use Sample Free Cloud Database for the datasource*/
 		/*Contact List*/
 		$this->load->model('ContactModel');
 		$data['contact_list'] = $this->ContactModel->getAllContact();
@@ -41,6 +42,12 @@ class Contact extends CI_Controller {
 
 
 	public function send_mail($contactMail){
+
+		/*
+		SMTP Note: I do not have a free SMPT account 
+
+		*/
+
         $from_email = "tblemail@example.com";
         $to_email = $contactMail;
         //Load email library
